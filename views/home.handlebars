@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="content">
+        {{#if error}}
+        <p class="error">Error: {{error}}</p>
+        {{/if}}
+        <form method="POST">
+            <input type="text" name="url" value="{{originalURL}}" placeholder="Enter your long a*s URL" />
+            <div class="eq_cont">
+                <div>
+                    {{#if result}}
+                    <p class="result">
+                        {{#if assigned}}
+                        Assigned :
+                        {{else}}
+                        Generated URL :
+                        {{/if}}
+                        <a href="{{url}}" class="url">{{url}}</a>
+                    </p>
+                    {{/if}}
+                </div>
+                <input type="submit" class="btn" value="{{buttonText}}" />
+            </div>
+        </form>
+    </div>
+</div>
